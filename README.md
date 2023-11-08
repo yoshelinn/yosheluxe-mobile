@@ -6,7 +6,6 @@
 
 # ===========================
 
-
 # Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
 
 Stateful Widget adalah jenis widget yang digunakan untuk mengelola dan memperbarui keadaan atau state dalam aplikasi Anda. Ini cocok untuk komponen yang perlu memantau perubahan data atau merespons interaksi pengguna. Contohnya adalah tombol "Like" pada media sosial
