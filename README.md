@@ -31,8 +31,7 @@ Sebaliknya, widget tidak berubah atau statis adalah jenis widget yang digunakan 
    <https://docs.flutter.dev/get-started/install/windows>
 
 2. Membuat aplikasi baru dengan command berikut:
-3. 
-```flutter create yosheluxe_mobile```
+   ```flutter create yosheluxe_mobile```
 
 4. Melengkapi `menu.dart`yang berisi ketiga komponen widget
 ```dart
