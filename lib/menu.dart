@@ -73,8 +73,8 @@ class ShopCard extends StatelessWidget {
 
   const ShopCard(this.item, {super.key}); // Constructor
 
-  @override
-  Widget build(BuildContext context) {
+  @override // Override
+    Widget build(BuildContext context) {
     return Material(
       color: item.color,
       child: InkWell(
