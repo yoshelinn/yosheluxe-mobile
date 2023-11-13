@@ -16,12 +16,14 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor : Colors.teal,
         title: const Text(
           'Yosheluxe',
           style: TextStyle(color: Colors.white),
         ),
+        backgroundColor: Colors.teal,
+        foregroundColor: Colors.white,
       ),
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
@@ -33,7 +35,7 @@ class MyHomePage extends StatelessWidget {
                 padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
                 // Widget Text untuk menampilkan tulisan dengan alignment center dan style yang sesuai
                 child: Text(
-                  'Welcome to Yosheluxe', // Text yang menandakan toko
+                  'PBP Shop', // Text yang menandakan toko
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
@@ -76,8 +78,8 @@ class ShopCard extends StatelessWidget {
 
   const ShopCard(this.item, {super.key}); // Constructor
 
-  @override // Override
-    Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return Material(
       color: item.color,
       child: InkWell(
@@ -88,6 +90,13 @@ class ShopCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("${item.name} Succesfully!")));
+          // Navigate ke route yang sesuai (tergantung jenis tombol)
+          if (item.name == "Add Product") {
+            // TODO: Gunakan Navigator.push untuk melakukan navigasi ke MaterialPageRoute yang mencakup ShopFormPage.
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ShopFormPage()));
+    
+          }
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
