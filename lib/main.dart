@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yosheluxe_mobile/menu.dart';
+import 'package:yosheluxe_mobile/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,7 +7,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   // This widget is the root of your application.
   @override
