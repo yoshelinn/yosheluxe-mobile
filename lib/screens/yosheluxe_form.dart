@@ -26,7 +26,7 @@ class _ShopFormPageState extends State<ShopFormPage> {
               'Add Your New Product Here! ',
             ),
           ),
-          backgroundColor: Colors.indigo,
+          backgroundColor: Colors.teal,
           foregroundColor: Colors.white,
         ),
         
