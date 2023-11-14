@@ -1,3 +1,4 @@
+import 'package:yosheluxe_mobile/screens/items.dart';
 import 'package:flutter/material.dart';
 import 'package:yosheluxe_mobile/screens/menu.dart';
 import 'package:yosheluxe_mobile/screens/yosheluxe_form.dart';
@@ -66,7 +67,15 @@ class LeftDrawer extends StatelessWidget {
                   );
                 },
               ),
-
+              ListTile(
+                      leading: const Icon(Icons.list),
+                      title: const Text('Lihat Produk'),
+                      // Bagian redirection ke ShopFormPage
+                      onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => items()));
+                      },
+                    ),
         ],
       ),
     );
