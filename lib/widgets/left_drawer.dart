@@ -1,9 +1,10 @@
-import 'package:yosheluxe_mobile/models/Product.dart';
 import 'package:flutter/material.dart';
+import 'package:yosheluxe_mobile/screens/product_list.dart';
 import 'package:yosheluxe_mobile/screens/menu.dart';
 import 'package:yosheluxe_mobile/screens/yosheluxe_form.dart';
-import 'package:yosheluxe_mobile/screens/product_page.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
+
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});

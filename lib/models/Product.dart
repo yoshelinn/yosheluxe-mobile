@@ -55,6 +55,8 @@ class Fields {
         description: json["description"],
     );
 
+  get amount => null;
+
     Map<String, dynamic> toJson() => {
         "user": user,
         "name": name,

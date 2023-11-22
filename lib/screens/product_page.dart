@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:yosheluxe_mobile/models/item.dart';
+import 'package:yosheluxe_mobile/models/Product.dart';
 import 'package:yosheluxe_mobile/widgets/left_drawer.dart';
 
 class ItemPage extends StatelessWidget {
-  final Item item;
+  final Product product;
 
-  const ItemPage(this.item, {super.key});
+  const ItemPage(this.product, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(item.fields.name),
+        title: Text(product.fields.name),
       ),
       drawer: const LeftDrawer(),
       body: Padding(
@@ -19,10 +19,10 @@ class ItemPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Name: ${item.fields.name}"),
-            Text("Amount: ${item.fields.amount}"),
-            Text("Description: ${item.fields.description}"),
-            Text("Price: ${item.fields.price}"),
+            Text("Name: ${product.fields.name}"),
+            Text("Amount: ${product.fields.amount}"),
+            Text("Description: ${product.fields.description}"),
+            Text("Price: ${product.fields.price}"),
           ],
         ),
       ),

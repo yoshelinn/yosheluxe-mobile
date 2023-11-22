@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:yosheluxe_mobile/widgets/left_drawer.dart';
-import 'package:yosheluxe_mobile/models/item.dart';
-import 'package:yosheluxe_mobile/screens/item_page.dart';
+import 'package:yosheluxe_mobile/models/Product.dart';
+import 'package:yosheluxe_mobile/screens/product_page.dart';
 import 'package:provider/provider.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 
@@ -15,13 +15,13 @@ class YosheluxeListPage extends StatefulWidget {
 }
 
 class _YosheluxeListPageState extends State<YosheluxeListPage> {
-  Future<List<Item>> fetchItem(CookieRequest request) async {
+  Future<List<Product>> fetchItem(CookieRequest request) async {
     final response = await request.get('http://127.0.0.1:8000/user_data/');
 
-    List<Item> listItem = [];
+    List<Product> listItem = [];
     for (var i in response) {
-      Item item = Item.fromJson(i);
-      listItem.add(item);
+      Product product = Product.fromJson(i);
+      listItem.add(product);
     }
 
     return listItem;
