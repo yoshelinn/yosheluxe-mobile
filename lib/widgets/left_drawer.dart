@@ -1,7 +1,9 @@
-import 'package:yosheluxe_mobile/screens/items.dart';
+import 'package:yosheluxe_mobile/models/Product.dart';
 import 'package:flutter/material.dart';
 import 'package:yosheluxe_mobile/screens/menu.dart';
 import 'package:yosheluxe_mobile/screens/yosheluxe_form.dart';
+import 'package:yosheluxe_mobile/screens/product_page.dart';
+import 'package:provider/provider.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -61,7 +63,7 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const ShopFormPage(),
+                  builder: (context) => const YosheluxeFormPage(),
 
                     )
                   );
@@ -73,7 +75,7 @@ class LeftDrawer extends StatelessWidget {
                       // Bagian redirection ke ShopFormPage
                       onTap: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => items()));
+                              MaterialPageRoute(builder: (context) => const YosheluxeListPage()));
                       },
                     ),
         ],
